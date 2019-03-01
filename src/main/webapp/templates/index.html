@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:replace="header.html :: copy"></div>
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">MBTI Type Pairings</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">Check The Fit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#projects">Cognitive Functions</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h1 class="mx-auto my-0 text-uppercase">MBTI Pairings</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Get the 8 cognitive functions of any MBTI type and see their
+                comaptibility.</h2>
+            <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        </div>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-white mb-4">Choose The Types</h2>
+                <p class="text-white-50">Pick 2 types of whom you're interested in compatibility.</p>
+            </div>
+            <div class="col-lg-8 mx-auto mb-4">
+                <form method="post">
+                    <select id="person1" name="person1" class="btn btn-primary">
+                        <option value="ESTP">ESTP</option>
+                        <option value="ESTJ">ESTJ</option>
+                        <option value="ESFP">ESFP</option>
+                        <option value="ESFJ">ESFJ</option>
+                        <option value="ENTP">ENTP</option>
+                        <option value="ENTJ">ENTJ</option>
+                        <option value="ENFP">ENFP</option>
+                        <option value="ENFJ">ENFJ</option>
+                        <option value="ISTP">ISTP</option>
+                        <option value="ISTJ">ISTJ</option>
+                        <option value="ISFP">ISFP</option>
+                        <option value="ISFJ">ISFJ</option>
+                        <option value="INTP">INTP</option>
+                        <option value="INTJ">INTJ</option>
+                        <option value="INFP">INFP</option>
+                        <option value="INFJ">INFJ</option>
+                    </select>
+                    <select id="person2" name="person2" class="btn btn-primary">
+                        <option value="ESTP">ESTP</option>
+                        <option value="ESTJ">ESTJ</option>
+                        <option value="ESFP">ESFP</option>
+                        <option value="ESFJ">ESFJ</option>
+                        <option value="ENTP">ENTP</option>
+                        <option value="ENTJ">ENTJ</option>
+                        <option value="ENFP">ENFP</option>
+                        <option value="ENFJ">ENFJ</option>
+                        <option value="ISTP">ISTP</option>
+                        <option value="ISTJ">ISTJ</option>
+                        <option value="ISFP">ISFP</option>
+                        <option value="ISFJ">ISFJ</option>
+                        <option value="INTP">INTP</option>
+                        <option value="INTJ">INTJ</option>
+                        <option value="INFP">INFP</option>
+                        <option value="INFJ">INFJ</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary js-scroll-trigger">Let's See!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <div class="col-xl-8 col-lg-7">
+                <img class="img-fluid mb-3 mb-lg-0" src="static/startbootstrap-grayscale/img/match.jpg" alt="">
+            </div>
+            <div class="col-xl-4 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h4><span class="font-weight-bold" th:text="${session.person1}"></span> and <span class="font-weight-bold" th:text="${session.person2}"></span></h4>
+                    <h4>Match: <span class="font-weight-bold" th:text="${session.matchNr}"></span><span>%</span></h4>
+                    <p>The match ratio is calculated based on the order of your cognitive functions. For example, the first persons's most used function,
+                        <span class="text-black-50 mb-0" th:text="${session.hero1}"></span>
+                        is attracted to its pair,
+                        <span class="text-black-50 mb-0" th:text="${session.pairOfHero1}"></span>.
+                        The closer it is, the better the match is. And so on, every function tries to find its pair. To find out more about the match calculations, click here. To see the cognitive functions of each type in order, scroll down.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-50">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h2 class="text-danger" th:text="${session.person1}">Type 1</h2>
+                            <h4 class="text-white" th:text='${session.hero1}'> Person 1 Hero Function</h4>
+                            <p class="mb-0 text-white-50">Description of hero function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-50">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h2 class="text-danger" th:text="${session.person2}">Type 1</h2>
+                            <h4 class="text-white" th:text="${session.hero2}">Person 2 Hero Function</h4>
+                            <p class="mb-0 text-white-50">Description of hero function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.parent1}">Person 1 Parent Function</h4>
+                            <p class="mb-0 text-white-50">Description of parent function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.parent2}">Person 2 Parent Function</h4>
+                            <p class="mb-0 text-white-50">Description of parent function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.child1}">Person 1 Child Function</h4>
+                            <p class="mb-0 text-white-50">Description of child function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.child2}">Person 2 Child Function</h4>
+                            <p class="mb-0 text-white-50">Description of child function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.inferior1}">Person 1 Inferior Function</h4>
+                            <p class="mb-0 text-white-50">Description of child function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.inferior2}">Person 2 Inferior Function</h4>
+                            <p class="mb-0 text-white-50">Description of child function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-50">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text='${session.nemesis1}'> Person 1 Nemesis Function</h4>
+                            <p class="mb-0 text-white-50">Description of hero function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-50">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.nemesis2}">Person 2 Nemesis Function</h4>
+                            <p class="mb-0 text-white-50">Description of hero function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.criticalParent1}">Person 1 Parent Function</h4>
+                            <p class="mb-0 text-white-50">Description of parent function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.criticalParent2}">Person 2 Parent Function</h4>
+                            <p class="mb-0 text-white-50">Description of parent function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-50">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text='${session.trickster1}'> Person 1 Hero Function</h4>
+                            <p class="mb-0 text-white-50">Description of hero function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-50">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.trickster2}">Person 2 Hero Function</h4>
+                            <p class="mb-0 text-white-50">Description of hero function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-dark text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.demon1}">Person 1 Parent Function</h4>
+                            <p class="mb-0 text-white-50">Description of parent function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white" th:text="${session.demon2}">Person 2 Parent Function</h4>
+                            <p class="mb-0 text-white-50">Description of parent function.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-black small text-center text-white-50">
+    <div class="container">
+        Evi Kadar &copy; Pet Project 2019
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="static/startbootstrap-grayscale/vendor/jquery/jquery.min.js"></script>
+<script src="static/startbootstrap-grayscale/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="static/startbootstrap-grayscale/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="static/startbootstrap-grayscale/js/grayscale.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+model/CognitiveFunctions.class
+config/ThymeleafConfig.class
+model/MBTIType.class
+config/TemplateEngineUtil.class
+model/CognitiveRoles.class
+controller/IndexController.class
