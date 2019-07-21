@@ -1,6 +1,3 @@
-/home/evi/IdeaProjects/codecoolshop3/MBTIPairings/src/main/java/model/CognitiveRoles.java
-/home/evi/IdeaProjects/codecoolshop3/MBTIPairings/src/main/java/model/MBTIType.java
-/home/evi/IdeaProjects/codecoolshop3/MBTIPairings/src/main/java/model/CognitiveFunctions.java
-/home/evi/IdeaProjects/codecoolshop3/MBTIPairings/src/main/java/controller/IndexController.java
-/home/evi/IdeaProjects/codecoolshop3/MBTIPairings/src/main/java/config/TemplateEngineUtil.java
-/home/evi/IdeaProjects/codecoolshop3/MBTIPairings/src/main/java/config/ThymeleafConfig.java
+/home/evi/IdeaProjects/csorszWeb4/src/main/java/config/ThymeleafConfig.java
+/home/evi/IdeaProjects/csorszWeb4/src/main/java/config/TemplateEngineUtil.java
+/home/evi/IdeaProjects/csorszWeb4/src/main/java/controller/IndexController.java
