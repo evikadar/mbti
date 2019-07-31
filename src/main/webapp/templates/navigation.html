@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="copy">
+
+    <div>
+        <header class="header1">
+            <!-- Header desktop -->
+            <div class="container-menu-header">
+                <div class="topbar">
+                    <div class="topbar-social">
+                        <!-- TODO: csörsz - linkeket kérek :) -->
+                        <a href="https://www.facebook.com/groups/360913094763260/"
+                           class="topbar-social-item fa fa-facebook" target="_blank"></a>
+                        <a href="https://www.youtube.com/channel/UC-1xAOlQDNcP-nUhOZUnWfg"
+                           class="topbar-social-item fa fa-youtube-play" target="_blank"></a>
+                    </div>
+
+                    <span class="topbar-child1">
+					MBTI alapu szemelyisegelemzes es tanacsadas
+				</span>
+
+                    <div class="topbar-child2">
+					<span class="topbar-email">
+						pcsorsz@gmail.com
+					</span>
+                    </div>
+                </div>
+
+                <div class="wrap_header">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <!-- todo: ide kell majd a logó képe -->
+                        <img src="static/fashe/images/icons/logo.png" alt="IMG-LOGO">
+                    </a>
+
+                    <!-- Menu -->
+                    <div class="wrap_menu">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+                                    <a href="../static/fashe/product.html">Teszt</a>
+                                </li>
+
+                                <li>
+                                    <a href="index.html">Szemelyisegtipusok</a>
+                                    <ul class="sub_menu">
+                                        <li><a href="index.html">INFJ</a></li>
+                                        <li><a href="../static/fashe/home-02.html">ENFP</a></li>
+                                        <li><a href="../static/fashe/home-03.html">INTP</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="../static/fashe/product.html">Tanacsadas & Oktatas</a>
+                                    <ul class="sub_menu">
+                                        <!-- todo: ide tedd be a szövegeket, hogy mik legyenek a linkek nevei -->
+                                        <li><a href="index.html">Egyik elem</a></li>
+                                        <li><a href="../static/fashe/home-02.html">Masik elem</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="sale-noti">
+                                    <a href="../static/fashe/cart.html">Programok</a>
+                                </li>
+
+                                <li>
+                                    <a href="../static/fashe/cart.html">Vlog / Blog</a>
+                                </li>
+
+                                <li>
+                                    <a href="../static/fashe/blog.html">Rolunk</a>
+                                </li>
+
+                                <li>
+                                    <a href="../static/fashe/about.html">Kapcsolat</a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Mobile -->
+            <div class="wrap_header_mobile">
+                <!-- Logo mobile -->
+                <a href="index.html" class="logo-mobile">
+                    <img src="static/fashe/images/icons/logo.png" alt="IMG-LOGO">
+                </a>
+
+                <!-- Button show menu -->
+                <div class="btn-show-menu">
+                    <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div class="wrap-side-menu">
+                <nav class="side-menu">
+                    <ul class="main-menu">
+                        <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<span class="topbar-child1">
+							MBTI alapu szemelyisegelemzes es tanacsadas
+						</span>
+                        </li>
+
+                        <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+                            <div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								pcsorsz@gmail.com
+							</span>
+                            </div>
+                        </li>
+
+                        <li class="item-topbar-mobile p-l-10">
+                            <div class="topbar-social-mobile">
+                                <a href="https://www.facebook.com/groups/360913094763260/"
+                                   class="topbar-social-item fa fa-facebook" target="_blank"></a>
+                                <a href="https://www.youtube.com/channel/UC-1xAOlQDNcP-nUhOZUnWfg"
+                                   class="topbar-social-item fa fa-youtube-play" target="_blank"></a>
+                            </div>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="../static/fashe/product.html">Teszt</a>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="index.html">Személyiségtípusok</a>
+                            <ul class="sub-menu">
+                                <li><a href="../static/fashe/home-02.html">INFJ</a></li>
+                                <li><a href="../static/fashe/home-03.html">ENFP</a></li>
+                                <li><a href="../static/fashe/home-03.html">INTP</a></li>
+                            </ul>
+                            <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="index.html">Trening & Oktatas</a>
+                            <ul class="sub-menu">
+                                <li><a href="../static/fashe/home-02.html">Egy</a></li>
+                                <li><a href="../static/fashe/home-03.html">Ketto</a></li>
+                            </ul>
+                            <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="../static/fashe/product.html">Programok</a>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="../static/fashe/product.html">Vlog / Blog</a>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="../static/fashe/cart.html">Rolunk</a>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="../static/fashe/blog.html">Kapcsolat</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+</div>
+
+
+</html>

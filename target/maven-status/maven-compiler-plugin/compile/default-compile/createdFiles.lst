@@ -1,3 +1,4 @@
 config/ThymeleafConfig.class
+controller/RolunkController.class
 config/TemplateEngineUtil.class
 controller/IndexController.class
