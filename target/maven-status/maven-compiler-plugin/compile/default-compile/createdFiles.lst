@@ -1,4 +1,1 @@
-controller\RolunkController.class
-config\TemplateEngineUtil.class
-controller\IndexController.class
-config\ThymeleafConfig.class
+controller/RolunkController.class
