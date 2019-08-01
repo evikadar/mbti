@@ -23,14 +23,4 @@ public class RolunkController extends HttpServlet {
 
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String person1 = req.getParameter("person1");
-        String person2 = req.getParameter("person2");
-
-        HttpSession session = req.getSession(true);;
-        session.setAttribute("person1", person1);
-        session.setAttribute("person2", person2);
-        resp.sendRedirect("/");
-    }
 }
