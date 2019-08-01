@@ -23,8 +23,19 @@
         <div class="row">
             <div class="col-md-6 p-b-30">
                 <div class="p-r-20 p-r-0-lg">
-                    <div class="contact-map size21" id="google_map" data-map-x="40.614439" data-map-y="-73.926781"
-                         data-pin="images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="600" height="503" id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=budapest%20trencs%C3%A9ni%20utca%2045&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            </iframe>
+                            <a href="https://www.embedgooglemap.org">
+                            </a>
+                        </div>
+                        <style>
+                            .mapouter{position: relative;width: 100%;min-height: 1px;padding-right: 15px;padding-left: 15px;position:relative;text-align:right;height:503px;}.gmap_canvas {overflow:hidden;background:none!important;height:503px;}
+                        </style>
+                    </div>
                 </div>
             </div>
 
@@ -100,6 +111,8 @@
 			minimumResultsForSearch: 20,
 			dropdownParent: $('#dropDownSelect2')
 		});
+
+
 
 
 </script>
