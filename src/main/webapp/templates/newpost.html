@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Új post</title>
+    <div th:replace="header.html :: copy"></div>
+</head>
+<body class="animsition">
+
+<!-- Header -->
+<div th:replace="navigation.html :: copy"></div>
+
+
+<!-- Title Page -->
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
+         style="background-image: url(static/fashe/images/heading-pages-05.jpg);">
+    <h2 class="l-text2 t-center">
+        New Post
+    </h2>
+</section>
+
+<section class="bgwhite p-t-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-9 p-b-75">
+                <div class="p-r-50 p-r-0-lg">
+                    <form method="post" class="leave-comment">
+                        <h4 class="m-text26 p-b-36 p-t-15">
+                            Új Post
+                        </h4>
+
+                        <div class="bo4 of-hidden size15 m-b-20">
+                            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="title" placeholder="Cím">
+                        </div>
+
+                        <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="text"
+                                  placeholder="Szöveg"></textarea>
+
+                        <div class="bo4 of-hidden size15 m-b-20">
+                            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="photo"
+                                   placeholder="Fotó Url - azt írd be, ami a static/posts mappában a kép neve, kiterjesztéssel együtt">
+                        </div>
+
+                        <div class="w-size25">
+                            <!-- Button -->
+                            <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+                                Küldés
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3 p-b-75">
+                <div class="rightbar">
+
+                    <!-- Archive -->
+                    <h4 class="m-text23 p-t-50 p-b-16">
+                        Archive
+                    </h4>
+
+                    <!-- Tags -->
+                    <h4 class="m-text23 p-t-50 p-b-25">
+                        Címkék
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer from this special file -->
+<div th:replace="footer.html :: copy"></div>
+
+
+<!-- Back to top -->
+<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+</div>
+
+<!-- Container Selection -->
+<div id="dropDownSelect1"></div>
+<div id="dropDownSelect2"></div>
+
+
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/bootstrap/js/popper.js"></script>
+<script type="text/javascript" src="static/fashe/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/select2/select2.min.js"></script>
+
+<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect2')
+		});
+
+
+
+</script>
+
+<!--===============================================================================================-->
+
+<script src="static/fashe/js/main.js"></script>
+
+
+</body>
+</html>

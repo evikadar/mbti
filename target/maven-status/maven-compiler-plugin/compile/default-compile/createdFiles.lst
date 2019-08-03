@@ -1,3 +1,7 @@
 controller/KapcsolatController.class
 controller/RolunkController.class
+service/BlogService.class
+controller/BlogController.class
+controller/NewPostController.class
+model/BlogPost.class
 controller/KapcsolatController$1.class

@@ -1,5 +1,9 @@
 /home/evi/IdeaProjects/mbti/src/main/java/controller/IndexController.java
 /home/evi/IdeaProjects/mbti/src/main/java/config/TemplateEngineUtil.java
+/home/evi/IdeaProjects/mbti/src/main/java/service/BlogService.java
 /home/evi/IdeaProjects/mbti/src/main/java/controller/RolunkController.java
 /home/evi/IdeaProjects/mbti/src/main/java/controller/KapcsolatController.java
+/home/evi/IdeaProjects/mbti/src/main/java/controller/BlogController.java
+/home/evi/IdeaProjects/mbti/src/main/java/controller/NewPostController.java
 /home/evi/IdeaProjects/mbti/src/main/java/config/ThymeleafConfig.java
+/home/evi/IdeaProjects/mbti/src/main/java/model/BlogPost.java
