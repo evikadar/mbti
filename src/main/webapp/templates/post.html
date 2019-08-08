@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rólam</title>
+    <div th:replace="header.html :: copy"></div>
+</head>
+<body class="animsition">
+
+<!-- Header -->
+<div th:replace="navigation.html :: copy"></div>
+
+
+<div>Hi</div>
+
+<!-- Footer from this special file -->
+<div th:replace="footer.html :: copy"></div>
+
+
+<!-- Back to top -->
+<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+</div>
+
+<!-- Container Selection -->
+<div id="dropDownSelect1"></div>
+<div id="dropDownSelect2"></div>
+
+
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/bootstrap/js/popper.js"></script>
+<script type="text/javascript" src="static/fashe/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="static/fashe/vendor/select2/select2.min.js"></script>
+
+<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect2')
+		});
+
+</script>
+
+<!--===============================================================================================-->
+
+<script src="static/fashe/js/main.js"></script>
+
+
+</body>
+</html>
